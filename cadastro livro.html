@@ -1,52 +1,25 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html>
 <head>
-    <meta charset="UTF-8">
     <title>Cadastro de Livro</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 30px;
-        }
-        form {
-            max-width: 400px;
-        }
-        label {
-            font-weight: bold;
-        }
-        input[type="text"], button {
-            width: 100%;
-            padding: 8px;
-            margin-top: 4px;
-            margin-bottom: 16px;
-            box-sizing: border-box;
-        }
-        button {
-            background-color: #0066cc;
-            color: white;
-            border: none;
-        }
-        button:hover {
-            background-color: #004d99;
-        }
-    </style>
 </head>
 <body>
-
-    <h1>Cadastro de Livro</h1>
-
-    <form method="POST" action="cadastro_livro.php">
-        <label for="titulo">Título:*</label><br>
-        <input type="text" id="titulo" name="titulo" required><br>
+    <h2>Cadastro de Livro</h2>
+    <form action="salvar_livro.php" method="post">
+        <label for="titulo">Título:</label><br>
+        <input type="text" id="titulo" name="titulo" required><br><br>
 
         <label for="autor">Autor:</label><br>
-        <input type="text" id="autor" name="autor"><br>
+        <input type="text" id="autor" name="autor" required><br><br>
 
-        <label for="tema">Tema:*</label><br>
-        <input type="text" id="tema" name="tema" required><br>
+        <label for="editora">Editora:</label><br>
+        <input type="text" id="editora" name="editora" required><br><br>
 
-        <button type="submit">Cadastrar Livro</button>
+        <label for="publicacao">Ano de Publicação:</label><br>
+        <input type="number" id="publicacao" name="publicacao" min="1000" max="9999" required><br><br>
+
+        <input type="submit" value="Cadastrar Livro">
     </form>
-
 </body>
 </html>
+
